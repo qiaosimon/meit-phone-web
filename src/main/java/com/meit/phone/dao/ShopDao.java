@@ -6,16 +6,16 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 
-public interface ShopDao extends JpaRepository<Shop,String> {
+public interface ShopDao extends JpaRepository<Shop,Integer> {
 
     @Override
     List<Shop> findAll();
 
     @Override
-    Shop getOne(String s);
+    Shop getOne(Integer i);
 
     @Override
     <S extends Shop> S save(S s);
 
-
+    List<Shop> findByCityidAndCateid(int cityid,int cateid);
 }

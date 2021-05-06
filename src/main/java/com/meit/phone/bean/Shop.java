@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Shop {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String shopname;

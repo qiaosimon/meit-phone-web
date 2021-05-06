@@ -8,11 +8,11 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.phone</groupId>
+    <artifactId>phone</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>demo</name>
-    <description>Demo project for Spring Boot</description>
+    <name>phone</name>
+    <description>Phone project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -38,7 +38,8 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <optional>true</optional>
+            <optional>true</optional> <!--不能被其它模块继承，如果多个子模块可以去掉  不必须-->
+            <scope>runtime</scope>   <!--只在运行时起作用  打包时不打进去-->
         </dependency>
 
 
@@ -50,7 +51,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.23</version>
+            <version>8.0.24</version>
             <scope>runtime</scope>
         </dependency>
 
@@ -97,11 +98,6 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>5.0.0.Alpha2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>2.2.6.RELEASE</version>
         </dependency>
 
 

@@ -15,12 +15,17 @@ public class ShopServiceImp implements ShopServiceInte {
     private ShopDao shopDao;
 
     @Override
-    public Shop selectById(String code) {
-        return shopDao.getOne(code);
+    public Shop selectById(Integer id) {
+        return shopDao.getOne(id);
     }
 
     @Override
     public List<Shop> findAll() {
         return shopDao.findAll();
+    }
+
+    @Override
+    public List<Shop> findByCityidAndCateid(int cityid, int cateid) {
+        return shopDao.findByCityidAndCateid(cityid,cateid);
     }
 }
